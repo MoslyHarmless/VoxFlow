@@ -940,6 +940,7 @@ p {
   
   .hero-content {
     text-align: center;
+    padding: 0 10px;
   }
   
   .hero-title {
@@ -957,6 +958,7 @@ p {
   
   .privacy-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .footer-grid {
@@ -965,12 +967,21 @@ p {
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-actions a:first-child {
+  .nav-links, .nav-actions .btn-nav:not(.btn-primary) {
     display: none;
   }
   
   .section-title {
     font-size: 32px;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
   }
   
   .faq-grid {
@@ -979,5 +990,103 @@ p {
   
   .footer-grid {
     grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-brand, .footer-links {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 70px;
+  }
+  
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+  
+  .logo-text {
+    font-size: 19px;
+  }
+  
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .nav-actions .btn-nav {
+    display: none; /* Hide download button in nav on extremely small screens */
+  }
+  
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+  
+  .hero-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .badge-premium {
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+  
+  .live-wave .bar {
+    width: 4px;
+    gap: 4px;
+  }
+  
+  .privacy-main-card {
+    padding: 30px 20px;
+  }
+  
+  .privacy-title {
+    font-size: 28px;
+  }
+  
+  .privacy-lead {
+    font-size: 15px;
+  }
+  
+  /* Policy details pages responsive overrides */
+  .policy-container {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  
+  .policy-card {
+    padding: 24px 20px !important;
+  }
+  
+  .policy-title {
+    font-size: 28px !important;
   }
 }
