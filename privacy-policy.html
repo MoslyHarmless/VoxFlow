@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoxFlow - Privacy Policy">
+  <title>VoxFlow - Privacy Policy</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Content switching styling */
+    body.lang-en .lang-content:not(.lang-en) { display: none; }
+    body.lang-ru .lang-content:not(.lang-ru) { display: none; }
+    body.lang-uk .lang-content:not(.lang-uk) { display: none; }
+    
+    .policy-container {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .policy-card {
+      padding: 48px;
+    }
+    
+    .policy-title {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+    
+    .policy-meta {
+      color: var(--text-tertiary);
+      font-size: 14px;
+      margin-bottom: 32px;
+      display: block;
+    }
+    
+    .policy-section {
+      margin-bottom: 32px;
+    }
+    
+    .policy-section h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+    
+    .policy-section p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+    
+    .policy-section ul, .policy-section ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+    
+    .policy-section li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+        <img src="assets/logo.png" alt="VoxFlow Logo" class="logo-img">
+        <span class="logo-text">VoxFlow</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#features" data-i18n="nav_features">Features</a>
+        <a href="index.html#demo" data-i18n="nav_demo">Interactive Demo</a>
+        <a href="index.html#privacy" data-i18n="nav_privacy">Privacy</a>
+        <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Language Dropdown -->
+        <div class="lang-selector" id="langSelector">
+          <button class="lang-btn" id="langBtn">
+            <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="current-lang" id="currentLang">English</span>
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" data-lang="en" class="lang-item active">English</a>
+            <a href="#" data-lang="ru" class="lang-item">Русский</a>
+            <a href="#" data-lang="uk" class="lang-item">Українська</a>
+          </div>
+        </div>
+        <a href="https://github.com/sk1ph" target="_blank" class="btn btn-secondary btn-nav">GitHub</a>
+        <a href="index.html#download" class="btn btn-primary btn-nav" data-i18n="nav_download">Download AAB</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container policy-container">
+    <div class="glass-card policy-card">
+      
+      <!-- English Content -->
+      <div class="lang-content lang-en">
+        <h1 class="policy-title">Privacy Policy</h1>
+        <span class="policy-meta">Last updated: June 26, 2026</span>
+        
+        <div class="policy-section">
+          <h3>Introduction</h3>
+          <p>VoxFlow ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application VoxFlow (the "App").</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Privacy-First Architecture</h3>
+          <p>VoxFlow is built on a privacy-first architecture. This means:</p>
+          <ul>
+            <li>Your audio recordings are processed entirely on your device</li>
+            <li>Your transcripts never leave your device unless you explicitly enable cloud backup</li>
+            <li>Your tasks, notes, and personal data are stored locally in encrypted SQLite</li>
+            <li>We do not have access to your voice recordings or transcripts</li>
+            <li>We do not sell, share, or monetize your personal data</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Information We Collect</h3>
+          <p>We collect minimal information necessary to provide our services:</p>
+          <ol>
+            <li><strong>Account Information:</strong> When you sign in with Apple or Google, we receive your email address (or a private relay email), user ID, and display name. We do not collect your password.</li>
+            <li><strong>Device Information:</strong> We collect your device platform, app version, and push notification token (with your consent) to deliver notifications.</li>
+            <li><strong>Subscription Information:</strong> We process subscription status through RevenueCat to manage your access to premium features.</li>
+            <li><strong>Product Analytics:</strong> With your consent, we collect anonymous usage events such as screen views and feature usage. We never collect transcript content, audio recordings, or task titles.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>What We Never Collect</h3>
+          <p>VoxFlow is designed to NEVER collect:</p>
+          <ul>
+            <li>Audio recordings</li>
+            <li>Voice transcripts</li>
+            <li>Task titles or notes</li>
+            <li>Emotional analysis data</li>
+            <li>Personal weekly summaries</li>
+            <li>Any content from your brain dumps</li>
+          </ul>
+          <p>All of this data remains on your device.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>How We Use Information</h3>
+          <p>We use the limited information we collect to:</p>
+          <ul>
+            <li>Provide and maintain the App</li>
+            <li>Manage your subscription and entitlements</li>
+            <li>Send push notifications (with your consent)</li>
+            <li>Improve the App through anonymous analytics</li>
+            <li>Detect and prevent fraud or abuse</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Data Storage & Security</h3>
+          <ul>
+            <li>All personal data is stored locally on your device in encrypted SQLite</li>
+            <li>Your encryption keys are stored in your device's Keychain/Keystore</li>
+            <li>Cloud backups (when enabled) are encrypted on-device before upload</li>
+            <li>We use industry-standard encryption for data in transit (TLS)</li>
+            <li>Our backend never has access to encryption keys or plaintext data</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Third-Party Services</h3>
+          <p>We use the following third-party services:</p>
+          <ul>
+            <li>RevenueCat: For subscription management</li>
+            <li>Apple Sign-In / Google Sign-In: For authentication</li>
+            <li>Sentry: For crash reporting (with PII scrubbing)</li>
+            <li>Render: For backend hosting</li>
+            <li>Neon: For database hosting</li>
+          </ul>
+          <p>Each of these services has its own privacy policy. We ensure that no personal content (audio, transcripts, tasks) is shared with any third party.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Data Retention</h3>
+          <ul>
+            <li>Local data: Retained on your device until you delete it</li>
+            <li>Account data: Retained until you delete your account</li>
+            <li>Analytics data: Anonymized and retained for up to 2 years</li>
+            <li>Crash reports: Retained for up to 90 days</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Your Rights</h3>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access your data: Export all your local data at any time</li>
+            <li>Delete your data: Delete individual captures, tasks, or your entire account</li>
+            <li>Control privacy settings: Toggle analytics, crash reporting, and cloud backup</li>
+            <li>Opt out of notifications: Disable push notifications at any time</li>
+            <li>Request data deletion: Delete your account and all associated data</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Contact Us</h3>
+          <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+      <!-- Russian Content -->
+      <div class="lang-content lang-ru">
+        <h1 class="policy-title">Политика конфиденциальности</h1>
+        <span class="policy-meta">Последнее обновление: 26 июня 2026 г.</span>
+        
+        <div class="policy-section">
+          <h3>Введение</h3>
+          <p>VoxFlow («мы», «наш» или «нас») стремится защищать вашу конфиденциальность. Данная Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наше мобильное приложение VoxFlow («Приложение»).</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Приватность на первом месте</h3>
+          <p>VoxFlow построен на архитектуре с приоритетом конфиденциальности. Это означает:</p>
+          <ul>
+            <li>Ваши аудиозаписи обрабатываются исключительно на вашем устройстве</li>
+            <li>Ваши расшифровки никогда не покидают устройство, если вы явно не включите облачное резервное копирование</li>
+            <li>Ваши задачи, заметки и личные данные хранятся локально в зашифрованной базе данных SQLite</li>
+            <li>У нас нет доступа к вашим голосовым записям или расшифровкам</li>
+            <li>Мы не продаем, не передаем и не монетизируем ваши личные данные</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Информация, которую мы собираем</h3>
+          <p>Мы собираем минимальный объем информации, необходимый для предоставления услуг:</p>
+          <ol>
+            <li><strong>Информация об учетной записи:</strong> Когда вы входите через Apple или Google, мы получаем ваш адрес электронной почты, идентификатор пользователя и отображаемое имя. Мы не собираем ваш пароль.</li>
+            <li><strong>Информация об устройстве:</strong> Мы собираем данные о платформе устройства, версии приложения и токен push-уведомлений (с вашего согласия) для доставки уведомлений.</li>
+            <li><strong>Информация о подписке:</strong> Мы обрабатываем статус подписки через RevenueCat для управления вашим доступом к премиум-функциям.</li>
+            <li><strong>Аналитика продукта:</strong> С вашего согласия мы собираем анонимные события использования, такие как просмотры экранов и использование функций. Мы никогда не собираем содержимое расшифровок, аудиозаписи или названия задач.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Что мы никогда не собираем</h3>
+          <p>VoxFlow разработан так, чтобы НИКОГДА не собирать:</p>
+          <ul>
+            <li>Голосовые аудиозаписи</li>
+            <li>Текстовые расшифровки голоса</li>
+            <li>Названия задач или заметки к ним</li>
+            <li>Данные анализа эмоций</li>
+            <li>Личные еженедельные итоги</li>
+            <li>Любое содержимое ваших мыслей из записей</li>
+          </ul>
+          <p>Все эти данные остаются исключительно на вашем устройстве.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Как мы используем информацию</h3>
+          <p>Мы используем ограниченную информацию, которую собираем, для:</p>
+          <ul>
+            <li>Предоставления и поддержки Приложения</li>
+            <li>Управления вашей подпиской и правами доступа</li>
+            <li>Отправки push-уведомлений (с вашего согласия)</li>
+            <li>Улучшения Приложения с помощью анонимной аналитики</li>
+            <li>Обнаружения и предотвращения мошенничества или злоупотреблений</li>
+            <li>Соблюдения юридических обязательств</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Хранение и безопасность данных</h3>
+          <ul>
+            <li>Все личные данные хранятся локально на вашем устройстве в зашифрованной SQLite</li>
+            <li>Ключи шифрования хранятся в системном Keychain/Keystore вашего устройства</li>
+            <li>Облачные резервные копии (если они включены) шифруются на устройстве перед загрузкой</li>
+            <li>Мы используем стандартное отраслевое шифрование данных при передаче (TLS)</li>
+            <li>Наш бэкэнд никогда не имеет доступа к ключам шифрования или открытым данным</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Сторонние сервисы</h3>
+          <p>Мы используем следующие сторонние сервисы:</p>
+          <ul>
+            <li>RevenueCat: для управления подписками</li>
+            <li>Apple Sign-In / Google Sign-In: для аутентификации</li>
+            <li>Sentry: для отчетов о сбоях (с очисткой персональных данных)</li>
+            <li>Render: для хостинга бэкэнда</li>
+            <li>Neon: для хостинга баз данных</li>
+          </ul>
+          <p>У каждой из этих служб есть своя политика конфиденциальности. Мы гарантируем, что личный контент (аудио, расшифровки, задачи) не передается третьим лицам.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Сроки хранения данных</h3>
+          <ul>
+            <li>Локальные данные: хранятся на вашем устройстве, пока вы их не удалите</li>
+            <li>Данные учетной записи: хранятся до тех пор, пока вы не удалите свой аккаунт</li>
+            <li>Данные аналитики: анонимизируются и хранятся до 2 лет</li>
+            <li>Отчеты о сбоях: хранятся до 90 дней</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Ваши права</h3>
+          <p>Вы имеете право на:</p>
+          <ul>
+            <li>Доступ к данным: экспорт всех локальных данных в любое время</li>
+            <li>Удаление данных: удаление отдельных записей, задач или всей учетной записи</li>
+            <li>Управление настройками конфиденциальности: переключение аналитики, отчетов о сбоях и бэкэнда</li>
+            <li>Отключение уведомлений: отключение push-уведомлений в любое время</li>
+            <li>Запрос на удаление данных: удаление аккаунта и всех связанных данных</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Контакты</h3>
+          <p>Если у вас есть вопросы по этой Политике конфиденциальности, свяжитесь с нами по адресу:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+      <!-- Ukrainian Content -->
+      <div class="lang-content lang-uk">
+        <h1 class="policy-title">Політика конфиденційності</h1>
+        <span class="policy-meta">Останнє оновлення: 26 червня 2026 р.</span>
+        
+        <div class="policy-section">
+          <h3>Вступ</h3>
+          <p>VoxFlow («ми», «наш» або «нас») прагне захищати вашу конфіденційність. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо, розкриваємо та захищаємо вашу інформацію, коли ви використовуєте наше мобільне додаток VoxFlow («Додаток»).</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Приватність на першому місці</h3>
+          <p>VoxFlow побудований на архітектурі з пріоритетом конфіденційності. Це означає:</p>
+          <ul>
+            <li>Ваші аудіозаписи обробляються виключно на вашому пристрої</li>
+            <li>Ваші розшифровки ніколи не залишають пристрій, якщо ви явно не ввімкнете хмарне резервне копіювання</li>
+            <li>Ваші завдання, нотатки та особисті дані зберігаються локально в зашифрованій базі даних SQLite</li>
+            <li>У нас немає доступу до ваших голосових записів чи розшифровок</li>
+            <li>Ми не продаємо, не передаємо та не монетизуємо ваші особисті дані</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Інформація, яку ми збираємо</h3>
+          <p>Ми збираємо мінімальний обсяг інформації, необхідний для надання послуг:</p>
+          <ol>
+            <li><strong>Інформація про обліковий запис:</strong> Коли ви входите через Apple або Google, ми отримуємо вашу адресу електронної пошти, ідентифікатор користувача та відображуване ім'я. Ми не збираємо ваш пароль.</li>
+            <li><strong>Інформація про пристрій:</strong> Ми збираємо дані про платформу пристрою, версію програми та токен push-повідомлень (за вашою згодою) для доставки повідомлень.</li>
+            <li><strong>Інформація про підписку:</strong> Ми обробляємо статус підписки через RevenueCat для керування вашим доступом до преміум-функцій.</li>
+            <li><strong>Аналітика продукту:</strong> За вашою згодою ми збираємо анонімні події використання, такі як перегляди екранів та використання функцій. Ми ніколи не збираємо вміст розшифровок, аудіозаписи чи назви завдань.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Що ми ніколи не збираємо</h3>
+          <p>VoxFlow розроблений так, щоб НІКОЛИ не збирати:</p>
+          <ul>
+            <li>Голосові аудіозаписи</li>
+            <li>Текстові розшифровки голосу</li>
+            <li>Назви завдань чи нотатки до них</li>
+            <li>Дані аналізу емоцій</li>
+            <li>Особисті щотижневі підсумки</li>
+            <li>Будь-який вміст ваших думок із записів</li>
+          </ul>
+          <p>Усі ці дані залишаються виключно на вашому пристрої.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Як ми використовуємо інформацію</h3>
+          <p>Ми використовуємо обмежену інформацію, яку збираємо, для:</p>
+          <ul>
+            <li>Надання та підтримки Програми</li>
+            <li>Керування вашою підпискою та правами доступу</li>
+            <li>Надсилання push-повідомлень (за вашою згодою)</li>
+            <li>Поліпшення програми за допомогою анонімної аналітики</li>
+            <li>Виявлення та запобігання шахрайству або зловживанням</li>
+            <li>Дотримання юридичних зобов'язань</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Зберігання та безпека даних</h3>
+          <ul>
+            <li>Всі особисті дані зберігаються локально на вашому пристрої в зашифрованій SQLite</li>
+            <li>Ключі шифрування зберігаються у системному Keychain/Keystore вашого пристрою</li>
+            <li>Хмарні резервні копії (якщо вони включені) шифруються на пристрої перед завантаженням</li>
+            <li>Ми використовуємо стандартне галузеве шифрування даних при передачі (TLS)</li>
+            <li>Наш бекенд ніколи не має доступу до ключів шифрування або відкритих даних</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Сторонні сервіси</h3>
+          <p>Ми використовуємо такі сторонні сервіси:</p>
+          <ul>
+            <li>RevenueCat: для управління підписками</li>
+            <li>Apple Sign-In / Google Sign-In: для автентифікації</li>
+            <li>Sentry: для звітів про збої (з очищенням персональних даних)</li>
+            <li>Render: для хостингу бекенду</li>
+            <li>Neon: для хостингу баз даних</li>
+          </ul>
+          <p>Кожна з цих служб має свою політику конфіденційності. Ми гарантуємо, що особистий контент (аудіо, розшифровки, завдання) не передається третім особам.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Терміни зберігання даних</h3>
+          <ul>
+            <li>Локальні дані: зберігаються на вашому пристрої, доки ви їх не видалите</li>
+            <li>Дані облікового запису: зберігаються доти, доки ви не видалите свій аккаунт</li>
+            <li>Дані аналітики: анонімізуються та зберігаються до 2 років</li>
+            <li>Звіти про збої: зберігаються до 90 днів</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Ваші права</h3>
+          <p>Ви маєте право на:</p>
+          <ul>
+            <li>Доступ до даних: експорт усіх локальних даних у будь-який час</li>
+            <li>Видалення даних: видалення окремих записів, завдань або всього облікового запису</li>
+            <li>Керування налаштуваннями конфіденційності: перемикання аналітики, звітів про збої та бекенду</li>
+            <li>Вимкнення повідомлень: вимкнення push-повідомлень у будь-який час</li>
+            <li>Запит на видалення даних: видалення облікового запису та всіх пов'язаних даних</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Контакти</h3>
+          <p>Якщо у вас є питання щодо цієї Політики конфіденційності, зв'яжіться з нами за адресою:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+          <img src="assets/logo.png" alt="VoxFlow Logo" class="logo-img">
+          <span class="logo-text">VoxFlow</span>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">Privacy-first structured voice thoughts app.</p>
+      </div>
+      <div class="footer-links">
+        <h5 data-i18n="footer_product">Product</h5>
+        <a href="index.html#features" data-i18n="nav_features">Features</a>
+        <a href="index.html#demo" data-i18n="nav_demo">Demo</a>
+        <a href="index.html#download" data-i18n="nav_download">Download AAB</a>
+      </div>
+      <div class="footer-links">
+        <h5 data-i18n="footer_legal">Legal</h5>
+        <a href="privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
+        <a href="terms-of-service.html" data-i18n="footer_terms">Terms of Service</a>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <a href="mailto:moslyharmless@gmail.com">moslyharmless@gmail.com</a>
+        <span data-i18n="footer_copy">© 2026 VoxFlow. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for local page language sync -->
+  <script>
+    const translations = {
+      en: {
+        nav_features: "Features",
+        nav_demo: "Interactive Demo",
+        nav_privacy: "Privacy",
+        nav_faq: "FAQ",
+        nav_download: "Download AAB",
+        footer_desc: "Privacy-first structured voice thoughts app.",
+        footer_product: "Product",
+        footer_legal: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms of Service",
+        footer_copy: "© 2026 VoxFlow. All rights reserved."
+      },
+      ru: {
+        nav_features: "Функции",
+        nav_demo: "Демо-симулятор",
+        nav_privacy: "Приватность",
+        nav_faq: "Частые вопросы",
+        nav_download: "Скачать AAB",
+        footer_desc: "Приватный планировщик задач на основе вашего голоса.",
+        footer_product: "Продукт",
+        footer_legal: "Юридически",
+        footer_privacy: "Политика конфиденциальности",
+        footer_terms: "Условия использования",
+        footer_copy: "© 2026 VoxFlow. Все права защищены."
+      },
+      uk: {
+        nav_features: "Функції",
+        nav_demo: "Демо-симулятор",
+        nav_privacy: "Приватність",
+        nav_faq: "Питання",
+        nav_download: "Завантажити AAB",
+        footer_desc: "Приватний планувальник завдань на основі вашого голосу.",
+        footer_product: "Продукт",
+        footer_legal: "Юридично",
+        footer_privacy: "Політика конфіденційності",
+        footer_terms: "Умови використання",
+        footer_copy: "© 2026 VoxFlow. Всі права застережені."
+      }
+    };
+
+    let currentLanguage = 'en';
+
+    const langSelector = document.getElementById('langSelector');
+    const langBtn = document.getElementById('langBtn');
+    const currentLangSpan = document.getElementById('currentLang');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langSelector.classList.toggle('open');
+    });
+
+    document.addEventListener('click', () => {
+      langSelector.classList.remove('open');
+    });
+
+    document.querySelectorAll('.lang-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = item.getAttribute('data-lang');
+        setLanguage(lang);
+        langSelector.classList.remove('open');
+      });
+    });
+
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem('voxflow_lang', lang);
+      document.body.className = 'lang-' + lang;
+      
+      document.querySelectorAll('.lang-item').forEach(item => {
+        if (item.getAttribute('data-lang') === lang) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      const langNames = {
+        en: 'English',
+        ru: 'Русский',
+        uk: 'Українська'
+      };
+      currentLangSpan.textContent = langNames[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Init
+    const savedLang = localStorage.getItem('voxflow_lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>

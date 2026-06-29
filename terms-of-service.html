@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VoxFlow - Terms of Service">
+  <title>VoxFlow - Terms of Service</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Content switching styling */
+    body.lang-en .lang-content:not(.lang-en) { display: none; }
+    body.lang-ru .lang-content:not(.lang-ru) { display: none; }
+    body.lang-uk .lang-content:not(.lang-uk) { display: none; }
+    
+    .policy-container {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .policy-card {
+      padding: 48px;
+    }
+    
+    .policy-title {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+    
+    .policy-meta {
+      color: var(--text-tertiary);
+      font-size: 14px;
+      margin-bottom: 32px;
+      display: block;
+    }
+    
+    .policy-section {
+      margin-bottom: 32px;
+    }
+    
+    .policy-section h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+    
+    .policy-section p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+    
+    .policy-section ul, .policy-section ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+    
+    .policy-section li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+        <img src="assets/logo.png" alt="VoxFlow Logo" class="logo-img">
+        <span class="logo-text">VoxFlow</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html#features" data-i18n="nav_features">Features</a>
+        <a href="index.html#demo" data-i18n="nav_demo">Interactive Demo</a>
+        <a href="index.html#privacy" data-i18n="nav_privacy">Privacy</a>
+        <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Language Dropdown -->
+        <div class="lang-selector" id="langSelector">
+          <button class="lang-btn" id="langBtn">
+            <svg class="lang-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="current-lang" id="currentLang">English</span>
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" data-lang="en" class="lang-item active">English</a>
+            <a href="#" data-lang="ru" class="lang-item">Русский</a>
+            <a href="#" data-lang="uk" class="lang-item">Українська</a>
+          </div>
+        </div>
+        <a href="https://github.com/sk1ph" target="_blank" class="btn btn-secondary btn-nav">GitHub</a>
+        <a href="index.html#download" class="btn btn-primary btn-nav" data-i18n="nav_download">Download AAB</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container policy-container">
+    <div class="glass-card policy-card">
+      
+      <!-- English Content -->
+      <div class="lang-content lang-en">
+        <h1 class="policy-title">Terms of Service</h1>
+        <span class="policy-meta">Last updated: June 26, 2026</span>
+        
+        <div class="policy-section">
+          <h3>Acceptance of Terms</h3>
+          <p>By downloading, installing, or using the VoxFlow mobile application ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Description of Service</h3>
+          <p>VoxFlow is a privacy-first voice productivity application that helps you:</p>
+          <ul>
+            <li>Capture thoughts and ideas through voice recording</li>
+            <li>Transcribe speech to text locally on your device</li>
+            <li>Extract actionable tasks from your recordings</li>
+            <li>Manage your tasks with a built-in planner</li>
+            <li>Track focus sessions and productivity insights</li>
+          </ul>
+          <p>All voice processing and personal data storage occurs locally on your device.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>User Accounts</h3>
+          <ol>
+            <li>You may use VoxFlow as a guest without creating an account.</li>
+            <li>To access premium features, you may create an account using Apple Sign-In or Google Sign-In.</li>
+            <li>You are responsible for maintaining the security of your account.</li>
+            <li>You may delete your account and all associated data at any time from the Settings screen.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Subscriptions</h3>
+          <ol>
+            <li>VoxFlow offers a free tier with limited features.</li>
+            <li>Premium features require an active subscription (monthly or yearly).</li>
+            <li>Subscriptions are managed through the App Store (iOS) or Google Play (Android).</li>
+            <li>RevenueCat handles subscription processing on our behalf.</li>
+            <li>You may cancel your subscription at any time through your device's subscription settings.</li>
+            <li>Refunds are handled according to the App Store/Google Play refund policies.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Privacy & Data</h3>
+          <ol>
+            <li>Your voice recordings are processed entirely on your device.</li>
+            <li>We do not have access to your recordings, transcripts, or personal notes.</li>
+            <li>All personal data is stored locally in encrypted form.</li>
+            <li>Cloud backup is optional and encrypted before upload.</li>
+            <li>Please refer to our Privacy Policy for complete details on data handling.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Acceptable Use</h3>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the App for any illegal purpose</li>
+            <li>Attempt to reverse engineer or decompile the App</li>
+            <li>Distribute or share your account credentials</li>
+            <li>Use the App to harm, harass, or threaten others</li>
+            <li>Interfere with the App's functionality or security</li>
+            <li>Use automated tools to access the App</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Intellectual Property</h3>
+          <ol>
+            <li>The App, including its design, code, and content, is owned by VoxFlow.</li>
+            <li>You retain full ownership of all data you create using the App.</li>
+            <li>You may not copy, modify, or distribute the App or its components.</li>
+            <li>The VoxFlow name and logo are trademarks of VoxFlow.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Disclaimer of Warranties</h3>
+          <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+          <p>We do not warrant that:</p>
+          <ul>
+            <li>The App will be uninterrupted or error-free</li>
+            <li>The App will meet your specific requirements</li>
+            <li>Transcription results will be 100% accurate</li>
+            <li>The App will be compatible with all devices</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Limitation of Liability</h3>
+          <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, VoxFlow SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE APP.</p>
+          <p>Our total liability shall not exceed the amount you paid for the App in the twelve months preceding the claim.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Medical Disclaimer</h3>
+          <p>VoxFlow is a productivity tool and is NOT a medical device. We do not provide medical advice, diagnosis, or treatment.</p>
+          <p>Any wellbeing insights or emotional signals provided by the App are for informational purposes only and should not be considered medical advice.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Governing Law</h3>
+          <p>These Terms are governed by the laws of the European Union, without regard to conflict of law principles.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Contact</h3>
+          <p>For questions about these Terms, contact us at:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+      <!-- Russian Content -->
+      <div class="lang-content lang-ru">
+        <h1 class="policy-title">Условия использования</h1>
+        <span class="policy-meta">Последнее обновление: 26 июня 2026 г.</span>
+        
+        <div class="policy-section">
+          <h3>Согласие с условиями</h3>
+          <p>Скачивая, устанавливая или используя мобильное приложение VoxFlow («Приложение»), вы соглашаетесь соблюдать настоящие Условия использования («Условия»). Если вы не согласны с ними, не используйте Приложение.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Описание услуг</h3>
+          <p>VoxFlow — это планировщик задач с фокусом на конфиденциальность, который позволяет вам:</p>
+          <ul>
+            <li>Записывать мысли и идеи с помощью голоса</li>
+            <li>Расшифровывать речь в текст локально на устройстве</li>
+            <li>Извлекать готовые задачи из ваших записей</li>
+            <li>Управлять списком дел во встроенном календаре</li>
+            <li>Отслеживать сессии фокуса и статистику продуктивности</li>
+          </ul>
+          <p>Вся обработка голоса и хранение личных данных происходят полностью локально на вашем устройстве.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Учетные записи пользователей</h3>
+          <ol>
+            <li>Вы можете использовать VoxFlow в качестве гостя без создания учетной записи.</li>
+            <li>Для доступа к премиум-функциям вы можете войти с помощью Apple или Google.</li>
+            <li>Вы несете ответственность за безопасность своей учетной записи.</li>
+            <li>Вы можете удалить свой аккаунт и все связанные данные в любой момент в Настройках.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Подписки</h3>
+          <ol>
+            <li>VoxFlow предлагает бесплатную версию с базовыми функциями.</li>
+            <li>Премиум-функции требуют активной подписки (ежемесячной или ежегодной).</li>
+            <li>Подписки управляются через App Store (iOS) или Google Play (Android).</li>
+            <li>Сервис RevenueCat обрабатывает платежи по подпискам от нашего имени.</li>
+            <li>Вы можете отменить подписку в любое время через системные настройки вашего устройства.</li>
+            <li>Возврат средств осуществляется в соответствии с правилами магазинов App Store/Google Play.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Приватность и данные</h3>
+          <ol>
+            <li>Ваши голосовые файлы обрабатываются локально без отправки на серверы.</li>
+            <li>Мы не имеем доступа к вашим аудиофайлам, текстам или списку задач.</li>
+            <li>Все данные пользователя хранятся на устройстве в зашифрованном виде.</li>
+            <li>Облачный бэкап опционален и зашифрован перед загрузкой.</li>
+            <li>Пожалуйста, ознакомьтесь с нашей Политикой конфиденциальности для деталей.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Правила использования</h3>
+          <p>Вы соглашаетесь не:</p>
+          <ul>
+            <li>Использовать Приложение в незаконных целях</li>
+            <li>Пытаться декомпилировать или производить обратную разработку Приложения</li>
+            <li>Передавать свои данные авторизации третьим лицам</li>
+            <li>Использовать приложение для нанесения вреда или угроз другим людям</li>
+            <li>Нарушать безопасность или работу сервисов Приложения</li>
+            <li>Использовать автоматических ботов для парсинга Приложения</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Интеллектуальная собственность</h3>
+          <ol>
+            <li>Приложение, включая дизайн, код и контент, принадлежит VoxFlow.</li>
+            <li>Вы сохраняете полное право собственности на все созданные вами данные.</li>
+            <li>Вы не имеете права копировать, изменять или распространять компоненты приложения.</li>
+            <li>Название и логотип VoxFlow являются зарегистрированными товарными знаками.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Отказ от гарантий</h3>
+          <p>ПРИЛОЖЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ» И «ПО НАЛИЧИЮ» БЕЗ КАКИХ-ЛИБО ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ.</p>
+          <p>Мы не гарантируем, что:</p>
+          <ul>
+            <li>Приложение будет работать бесперебойно и без ошибок</li>
+            <li>Приложение полностью удовлетворит ваши личные требования</li>
+            <li>Точность распознавания голоса всегда будет составлять 100%</li>
+            <li>Приложение будет совместимо абсолютно со всеми устройствами</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Ограничение ответственности</h3>
+          <p>В МАКСИМАЛЬНОЙ СТЕПЕНИ, РАЗРЕШЕННОЙ ЗАКОНОМ, VoxFlow НЕ НЕСЕТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ КОСВЕННЫЕ, СЛУЧАЙНЫЕ ИЛИ ШТРАФНЫЕ УБЫТКИ, СВЯЗАННЫЕ С ИСПОЛЬЗОВАНИЕМ ПРИЛОЖЕНИЯ.</p>
+          <p>Наша общая ответственность перед вами не может превышать сумму, уплаченную вами за подписку в течение последних 12 месяцев.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Медицинский дисклеймер</h3>
+          <p>VoxFlow — это инструмент продуктивности, он НЕ является медицинским приложением. Мы не предоставляем медицинские диагнозы, консультации или лечение.</p>
+          <p>Любые советы по самочувствию или эмоциональные сигналы носят исключительно информационный характер и не заменяют визиты к врачу.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Применимое право</h3>
+          <p>Настоящие Условия регулируются законодательством Европейского Союза без учета принципов коллизионного права.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Контакты</h3>
+          <p>По вопросам условий использования обращайтесь к нам по адресу:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+      <!-- Ukrainian Content -->
+      <div class="lang-content lang-uk">
+        <h1 class="policy-title">Умови використання</h1>
+        <span class="policy-meta">Останнє оновлення: 26 червня 2026 р.</span>
+        
+        <div class="policy-section">
+          <h3>Згода з умовами</h3>
+          <p>Завантажуючи, встановлюючи або використовуючи мобільний додаток VoxFlow («Додаток»), ви погоджуєтеся дотримуватися цих Умов використання («Умови»). Якщо ви не згодні з ними, не використовуйте Додаток.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Опис послуг</h3>
+          <p>VoxFlow — це планувальник завдань з фокусом на конфіденційність, який дозволяє вам:</p>
+          <ul>
+            <li>Записувати думки та ідеї за допомогою голосу</li>
+            <li>Розшифровувати мовлення в текст локально на пристрої</li>
+            <li>Вилучати готові завдання з ваших записів</li>
+            <li>Керувати списком справ у вбудованому календарі</li>
+            <li>Відстежувати сесії фокусу та статистику продуктивності</li>
+          </ul>
+          <p>Вся обробка голосу та зберігання особистих даних відбуваються повністю локально на вашому пристрої.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Облікові записи користувачів</h3>
+          <ol>
+            <li>Ви можете використовувати VoxFlow як гостя без створення облікового запису.</li>
+            <li>Для доступу до преміум-функцій ви можете увійти за допомогою Apple або Google.</li>
+            <li>Ви несете відповідальність за безпеку свого облікового запису.</li>
+            <li>Ви можете видалити свій аккаунт та всі пов'язані дані у будь-який момент у Налаштуваннях.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Підписки</h3>
+          <ol>
+            <li>VoxFlow пропонує безкоштовну версію з базовими функціями.</li>
+            <li>Преміум-функції вимагають активної підписки (щомісячної або щорічної).</li>
+            <li>Підписки управляються через App Store (iOS) або Google Play (Android).</li>
+            <li>Сервіс RevenueCat обробляє платежі за підписками від нашого імені.</li>
+            <li>Ви можете скасувати підписку в будь-який час через системні налаштування пристрою.</li>
+            <li>Повернення коштів здійснюється відповідно до правил магазинів App Store/Google Play.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Приватність та дані</h3>
+          <ol>
+            <li>Ваші голосові файли обробляються локально без відправки на сервери.</li>
+            <li>Ми не маємо доступу до ваших аудіофайлів, текстів або списку завдань.</li>
+            <li>Всі дані користувача зберігаються на пристрої в зашифрованому вигляді.</li>
+            <li>Хмарний бекап є опціональним та зашифрований перед завантаженням.</li>
+            <li>Будь ласка, ознайомтеся з нашою Політикою конфіденційності для деталей.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Правила використання</h3>
+          <p>Ви погоджуєтеся не:</p>
+          <ul>
+            <li>Використовувати Додаток у незаконних цілях</li>
+            <li>Намагатися декомпілювати або проводити зворотну розробку Додатку</li>
+            <li>Передавати свої дані авторизації третім особам</li>
+            <li>Використовувати програму для нанесення шкоди чи погроз іншим людям</li>
+            <li>Порушувати безпеку чи роботу сервісів Додатку</li>
+            <li>Використовувати автоматичних ботів для парсингу Додатку</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Інтелектуальна власність</h3>
+          <ol>
+            <li>Додаток, включаючи дизайн, код та контент, належить VoxFlow.</li>
+            <li>Ви зберігаєте повне право власності на всі створені вами дані.</li>
+            <li>Ви не маєте права копіювати, змінювати чи розповсюджувати компоненти додатка.</li>
+            <li>Назва та логотип VoxFlow є зареєстрованими товарними знаками.</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <h3>Відмова від гарантій</h3>
+          <p>ДОДАТОК НАДАЄТЬСЯ «ЯК Є» ТА «ЗА НАЯВНОСТЮ» БЕЗ БУДЬ-ЯКИХ ЯВНИХ АБО ПОДРАЗУМІВАНИХ ГАРАНТІЙ.</p>
+          <p>Ми не гарантуємо, що:</p>
+          <ul>
+            <li>Додаток працюватиме безперебійно та без помилок</li>
+            <li>Додаток повністю задовольнить ваші особисті вимоги</li>
+            <li>Точність розпізнавання голосу завжди становитиме 100%</li>
+            <li>Додаток буде сумісним абсолютно з усіма пристроями</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>Обмеження відповідальності</h3>
+          <p>У МАКСИМАЛЬНІЙ МІРІ, ДОЗВОЛЕНІЙ ЗАКОНОМ, VoxFlow НЕ НЕСЕ ВІДПОВІДАЛЬНОСТІ ЗА БУДЬ-ЯКІ НЕПРЯМІ, ВИПАДКОВІ АБО ШТРАФНІ ЗБИТКИ, ПОВ'ЯЗАНІ З ВИКОРИСТАННЯМ ДОДАТКУ.</p>
+          <p>Наша загальна відповідальність перед вами не може перевищувати суму, сплачену вами за підписку протягом останніх 12 місяців.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Медичний дисклеймер</h3>
+          <p>VoxFlow — це інструмент продуктивності, він НЕ є медичним додатком. Ми не надаємо медичні діагнози, консультації чи лікування.</p>
+          <p>Будь-які поради щодо самопочуття або емоційні сигнали носять виключно інформаційний характер і не замінюють візити до лікаря.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Законодавство, що застосовується</h3>
+          <p>Ці Умови регулюються законодавством Європейського Союзу без урахування принципів колізійного права.</p>
+        </div>
+
+        <div class="policy-section">
+          <h3>Контакти</h3>
+          <p>З питань умов використання звертайтесь до нас за адресою:</p>
+          <p>Email: <a href="mailto:moslyharmless@gmail.com" class="accent-cyan">moslyharmless@gmail.com</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-container" style="cursor: pointer;" onclick="window.location.href='index.html'">
+          <img src="assets/logo.png" alt="VoxFlow Logo" class="logo-img">
+          <span class="logo-text">VoxFlow</span>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">Privacy-first structured voice thoughts app.</p>
+      </div>
+      <div class="footer-links">
+        <h5 data-i18n="footer_product">Product</h5>
+        <a href="index.html#features" data-i18n="nav_features">Features</a>
+        <a href="index.html#demo" data-i18n="nav_demo">Demo</a>
+        <a href="index.html#download" data-i18n="nav_download">Download AAB</a>
+      </div>
+      <div class="footer-links">
+        <h5 data-i18n="footer_legal">Legal</h5>
+        <a href="privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a>
+        <a href="terms-of-service.html" data-i18n="footer_terms">Terms of Service</a>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <a href="mailto:moslyharmless@gmail.com">moslyharmless@gmail.com</a>
+        <span data-i18n="footer_copy">© 2026 VoxFlow. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for local page language sync -->
+  <script>
+    const translations = {
+      en: {
+        nav_features: "Features",
+        nav_demo: "Interactive Demo",
+        nav_privacy: "Privacy",
+        nav_faq: "FAQ",
+        nav_download: "Download AAB",
+        footer_desc: "Privacy-first structured voice thoughts app.",
+        footer_product: "Product",
+        footer_legal: "Legal",
+        footer_privacy: "Privacy Policy",
+        footer_terms: "Terms of Service",
+        footer_copy: "© 2026 VoxFlow. All rights reserved."
+      },
+      ru: {
+        nav_features: "Функции",
+        nav_demo: "Демо-симулятор",
+        nav_privacy: "Приватность",
+        nav_faq: "Частые вопросы",
+        nav_download: "Скачать AAB",
+        footer_desc: "Приватный планировщик задач на основе вашего голоса.",
+        footer_product: "Продукт",
+        footer_legal: "Юридически",
+        footer_privacy: "Политика конфиденциальности",
+        footer_terms: "Условия использования",
+        footer_copy: "© 2026 VoxFlow. Все права защищены."
+      },
+      uk: {
+        nav_features: "Функції",
+        nav_demo: "Демо-симулятор",
+        nav_privacy: "Приватність",
+        nav_faq: "Питання",
+        nav_download: "Завантажити AAB",
+        footer_desc: "Приватний планувальник завдань на основі вашого голосу.",
+        footer_product: "Продукт",
+        footer_legal: "Юридично",
+        footer_privacy: "Політика конфіденційності",
+        footer_terms: "Умови використання",
+        footer_copy: "© 2026 VoxFlow. Всі права застережені."
+      }
+    };
+
+    let currentLanguage = 'en';
+
+    const langSelector = document.getElementById('langSelector');
+    const langBtn = document.getElementById('langBtn');
+    const currentLangSpan = document.getElementById('currentLang');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langSelector.classList.toggle('open');
+    });
+
+    document.addEventListener('click', () => {
+      langSelector.classList.remove('open');
+    });
+
+    document.querySelectorAll('.lang-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = item.getAttribute('data-lang');
+        setLanguage(lang);
+        langSelector.classList.remove('open');
+      });
+    });
+
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem('voxflow_lang', lang);
+      document.body.className = 'lang-' + lang;
+      
+      document.querySelectorAll('.lang-item').forEach(item => {
+        if (item.getAttribute('data-lang') === lang) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+
+      const langNames = {
+        en: 'English',
+        ru: 'Русский',
+        uk: 'Українська'
+      };
+      currentLangSpan.textContent = langNames[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+    }
+
+    // Init
+    const savedLang = localStorage.getItem('voxflow_lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>
