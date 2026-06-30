@@ -561,6 +561,7 @@ function initContactForm() {
     responseDiv.className = 'contact-response hidden';
 
     const formData = {
+      access_key: '5b8c044c-8308-4c45-82e7-185b4f7b38ff',
       name: document.getElementById('contactName').value,
       email: document.getElementById('contactEmail').value,
       subject: document.getElementById('contactSubject').value,
@@ -568,22 +569,23 @@ function initContactForm() {
     };
 
     try {
-      const res = await fetch('https://voxflow-contact-worker.moslyharm.workers.dev', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData)
       });
 
       const data = await res.json();
 
-      if (res.ok && data.success) {
+      if (res.status === 200) {
         responseDiv.textContent = translations[currentLanguage].contact_success || 'Message sent successfully!';
         responseDiv.classList.add('success');
         form.reset();
       } else {
-        throw new Error(data.error || 'Failed to send');
+        throw new Error(data.message || 'Failed to send');
       }
     } catch (err) {
       responseDiv.textContent = translations[currentLanguage].contact_error || 'Error sending message. Please try again later.';
