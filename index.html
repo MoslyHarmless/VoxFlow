@@ -283,6 +283,44 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contact_title">Get in <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">Have a question or feedback? We'd love to hear from you.</p>
+      </div>
+      
+      <div class="contact-container glass-card">
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName" data-i18n="contact_name">Name</label>
+              <input type="text" id="contactName" class="form-input" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" data-i18n="contact_email">Email</label>
+              <input type="email" id="contactEmail" class="form-input" required placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject" data-i18n="contact_subject">Subject</label>
+            <input type="text" id="contactSubject" class="form-input" required placeholder="How can we help?">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" data-i18n="contact_message">Message</label>
+            <textarea id="contactMessage" class="form-input form-textarea" rows="5" required placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full-width" id="contactSubmitBtn">
+            <span class="btn-text" data-i18n="contact_submit">Send Message</span>
+            <div class="spinner hidden" id="contactSpinner"></div>
+          </button>
+          <div id="contactResponse" class="contact-response hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ Section -->
   <section class="faq-section" id="faq">
     <div class="container">

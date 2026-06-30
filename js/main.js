@@ -73,6 +73,16 @@ const translations = {
     faq4_q: "Where can I contact support?",
     faq4_a: "You can reach our team at <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a> for any feature requests, bug reports, or general feedback.",
     
+    contact_title: "Get in <span class='gradient-text'>Touch</span>",
+    contact_subtitle: "Have a question or feedback? We'd love to hear from you.",
+    contact_name: "Name",
+    contact_email: "Email",
+    contact_subject: "Subject",
+    contact_message: "Message",
+    contact_submit: "Send Message",
+    contact_success: "Message sent successfully!",
+    contact_error: "Error sending message. Please try again later.",
+    
     footer_desc: "Privacy-first structured voice thoughts app.",
     footer_product: "Product",
     footer_legal: "Legal",
@@ -153,6 +163,16 @@ const translations = {
     faq4_q: "Куда писать при возникновении вопросов?",
     faq4_a: "Вы можете написать нашей команде на <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a>. Мы рады любым отзывам и предложениям!",
     
+    contact_title: "Свяжитесь с <span class='gradient-text'>нами</span>",
+    contact_subtitle: "У вас есть вопрос или предложение? Мы будем рады вас выслушать.",
+    contact_name: "Ваше имя",
+    contact_email: "Email",
+    contact_subject: "Тема сообщения",
+    contact_message: "Текст сообщения",
+    contact_submit: "Отправить письмо",
+    contact_success: "Сообщение успешно отправлено!",
+    contact_error: "Ошибка отправки. Попробуйте позже.",
+    
     footer_desc: "Приватный планировщик задач на основе вашего голоса.",
     footer_product: "Продукт",
     footer_legal: "Юридически",
@@ -232,6 +252,16 @@ const translations = {
     faq3_a: "Так, але це на 100% добровільно. Хмарне резервне копіювання шифрує базу вашим приватним ключом прямо на телефоні перед відправкою.",
     faq4_q: "Куди писати при виникненні питань?",
     faq4_a: "Ви можете написати нашій команді на <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a>. Ми завжди раді допомогти!",
+    
+    contact_title: "Зв'яжіться з <span class='gradient-text'>нами</span>",
+    contact_subtitle: "Маєте питання чи пропозицію? Ми будемо раді вас вислухати.",
+    contact_name: "Ваше ім'я",
+    contact_email: "Email",
+    contact_subject: "Тема повідомлення",
+    contact_message: "Текст повідомлення",
+    contact_submit: "Надіслати листа",
+    contact_success: "Повідомлення успішно надіслано!",
+    contact_error: "Помилка надсилання. Спробуйте пізніше.",
     
     footer_desc: "Приватний планувальник завдань на основі вашого голосу.",
     footer_product: "Продукт",
@@ -507,4 +537,67 @@ function showTasks() {
 // 4. Initialize
 document.addEventListener('DOMContentLoaded', () => {
   detectAndInitLanguage();
+  initContactForm();
 });
+
+// 5. Contact Form Logic
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const spinner = document.getElementById('contactSpinner');
+  const responseDiv = document.getElementById('contactResponse');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Disable form
+    submitBtn.disabled = true;
+    btnText.style.opacity = '0';
+    spinner.classList.remove('hidden');
+    responseDiv.classList.add('hidden');
+    responseDiv.className = 'contact-response hidden';
+
+    const formData = {
+      name: document.getElementById('contactName').value,
+      email: document.getElementById('contactEmail').value,
+      subject: document.getElementById('contactSubject').value,
+      message: document.getElementById('contactMessage').value
+    };
+
+    try {
+      const res = await fetch('https://voxflow-contact-worker.moslyharm.workers.dev', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        responseDiv.textContent = translations[currentLanguage].contact_success || 'Message sent successfully!';
+        responseDiv.classList.add('success');
+        form.reset();
+      } else {
+        throw new Error(data.error || 'Failed to send');
+      }
+    } catch (err) {
+      responseDiv.textContent = translations[currentLanguage].contact_error || 'Error sending message. Please try again later.';
+      responseDiv.classList.add('error');
+    } finally {
+      responseDiv.classList.remove('hidden');
+      submitBtn.disabled = false;
+      btnText.style.opacity = '1';
+      spinner.classList.add('hidden');
+      
+      // Hide response after 5 seconds
+      setTimeout(() => {
+        responseDiv.classList.add('hidden');
+      }, 5000);
+    }
+  });
+}

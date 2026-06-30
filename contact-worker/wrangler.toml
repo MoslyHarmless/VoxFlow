@@ -1,0 +1,5 @@
+name = "voxflow-contact-worker"
+main = "src/index.js"
+compatibility_date = "2024-03-20"
+
+# Note: MailChannels requires no extra bindings, it just works for zones on Cloudflare.
