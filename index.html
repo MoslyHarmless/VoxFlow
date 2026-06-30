@@ -87,7 +87,7 @@
       
       <div class="hero-visual">
         <div class="glass-card showcase-card">
-          <img src="assets/app_showcase.png" alt="VoxFlow Mobile App Preview" class="showcase-img">
+          <img id="heroShowcase" src="assets/app_showcase.png" alt="VoxFlow Mobile App Preview" class="showcase-img">
         </div>
       </div>
     </div>
@@ -254,22 +254,29 @@
   <section class="privacy-section" id="privacy">
     <div class="container">
       <div class="glass-card privacy-main-card">
-        <div class="privacy-icon">🛡️</div>
-        <h2 class="privacy-title" data-i18n="privacy_title">Your Data Stays Yours. <span class="accent-cyan">Period.</span></h2>
-        <p class="privacy-lead" data-i18n="privacy_lead">We believe that absolute privacy is essential for true mental clarity. When dumping raw thoughts, you shouldn't worry about third-party tracking, profiling, or cloud storage leaks.</p>
-        
-        <div class="privacy-grid">
-          <div class="privacy-item">
-            <h4 data-i18n="priv1_title">No Audio Uploads</h4>
-            <p data-i18n="priv1_desc">Our app transcribes audio utilizing on-device model weights. We never transmit audio bytes to any server.</p>
+        <div class="privacy-layout">
+          <div class="privacy-content-col">
+            <div class="privacy-icon">🛡️</div>
+            <h2 class="privacy-title" data-i18n="privacy_title">Your Data Stays Yours. <span class="accent-cyan">Period.</span></h2>
+            <p class="privacy-lead" data-i18n="privacy_lead">We believe that absolute privacy is essential for true mental clarity. When dumping raw thoughts, you shouldn't worry about third-party tracking, profiling, or cloud storage leaks.</p>
+            
+            <div class="privacy-grid-vertical">
+              <div class="privacy-item">
+                <h4 data-i18n="priv1_title">No Audio Uploads</h4>
+                <p data-i18n="priv1_desc">Our app transcribes audio utilizing on-device model weights. We never transmit audio bytes to any server.</p>
+              </div>
+              <div class="privacy-item">
+                <h4 data-i18n="priv2_title">Zero Ads & Tracking</h4>
+                <p data-i18n="priv2_desc">We do not use advertising APIs, profiling SDKs, or sell tracking tokens. Absolutely zero telemetry without explicit consent.</p>
+              </div>
+              <div class="privacy-item">
+                <h4 data-i18n="priv3_title">Local Keys</h4>
+                <p data-i18n="priv3_desc">Your local SQLite database is encrypted. Decryption tokens are protected by standard iOS Keychain and Android Keystore hardware.</p>
+              </div>
+            </div>
           </div>
-          <div class="privacy-item">
-            <h4 data-i18n="priv2_title">Zero Ads & Tracking</h4>
-            <p data-i18n="priv2_desc">We do not use advertising APIs, profiling SDKs, or sell tracking tokens. Absolutely zero telemetry without explicit consent.</p>
-          </div>
-          <div class="privacy-item">
-            <h4 data-i18n="priv3_title">Local Keys</h4>
-            <p data-i18n="priv3_desc">Your local SQLite database is encrypted. Decryption tokens are protected by standard iOS Keychain and Android Keystore hardware.</p>
+          <div class="privacy-poster-col">
+            <img id="privacyPoster" class="privacy-poster-img" src="assets/poster_en_privacy.png" alt="VoxFlow Privacy Poster">
           </div>
         </div>
       </div>

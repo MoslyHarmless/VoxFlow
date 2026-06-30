@@ -201,7 +201,6 @@ p {
 .logo-img {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
 }
 
 .logo-text {
@@ -814,8 +813,18 @@ p {
 
 .privacy-main-card {
   padding: 60px 48px;
-  text-align: center;
   background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.privacy-content-col {
+  text-align: left;
 }
 
 .privacy-icon {
@@ -829,28 +838,45 @@ p {
 }
 
 .privacy-lead {
-  font-size: 17px;
-  max-width: 750px;
-  margin: 0 auto 48px auto;
+  font-size: 16px;
+  margin-bottom: 32px;
   color: var(--text-secondary);
 }
 
-.privacy-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  text-align: left;
+.privacy-grid-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .privacy-item h4 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--text-primary);
 }
 
 .privacy-item p {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.privacy-poster-col {
+  display: flex;
+  justify-content: center;
+}
+
+.privacy-poster-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.privacy-poster-img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 60px rgba(139, 92, 246, 0.2);
 }
 
 /* FAQ */
@@ -933,7 +959,7 @@ p {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-grid, .simulator-grid {
+  .hero-grid, .simulator-grid, .privacy-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -956,9 +982,8 @@ p {
     justify-content: center;
   }
   
-  .privacy-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .privacy-content-col {
+    text-align: center;
   }
   
   .footer-grid {

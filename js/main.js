@@ -379,6 +379,16 @@ function setLanguage(lang) {
     }
   });
 
+  // Update localized images dynamically
+  const heroShowcase = document.getElementById('heroShowcase');
+  if (heroShowcase) {
+    heroShowcase.src = `assets/app_showcase_${lang}.png`;
+  }
+  const privacyPoster = document.getElementById('privacyPoster');
+  if (privacyPoster) {
+    privacyPoster.src = `assets/poster_${lang}_privacy.png`;
+  }
+
   // Reset simulation state when language changes to match templates
   resetSimulationUI();
 }
