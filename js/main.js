@@ -71,7 +71,7 @@ const translations = {
     faq3_q: "Can I sync my data to other devices?",
     faq3_a: "Yes, but it is entirely optional. If you choose to enable cloud backup, your data is encrypted with your private key before being sent to our secure databases.",
     faq4_q: "Where can I contact support?",
-    faq4_a: "You can reach our team at <a href='mailto:moslyharmless@gmail.com' class='accent-cyan'>moslyharmless@gmail.com</a> for any feature requests, bug reports, or general feedback.",
+    faq4_a: "You can reach our team at <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a> for any feature requests, bug reports, or general feedback.",
     
     footer_desc: "Privacy-first structured voice thoughts app.",
     footer_product: "Product",
@@ -151,7 +151,7 @@ const translations = {
     faq3_q: "Можно ли синхронизировать данные между устройствами?",
     faq3_a: "Да, но это на 100% добровольно. Облачное резервное копирование шифрует базу вашим приватным ключом прямо на телефоне перед отправкой.",
     faq4_q: "Куда писать при возникновении вопросов?",
-    faq4_a: "Вы можете написать нашей команде на <a href='mailto:moslyharmless@gmail.com' class='accent-cyan'>moslyharmless@gmail.com</a>. Мы рады любым отзывам и предложениям!",
+    faq4_a: "Вы можете написать нашей команде на <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a>. Мы рады любым отзывам и предложениям!",
     
     footer_desc: "Приватный планировщик задач на основе вашего голоса.",
     footer_product: "Продукт",
@@ -229,9 +229,9 @@ const translations = {
     faq2_q: "Чи справді база даних зашифрована?",
     faq2_a: "Так. Додаток використовує зашифровану БД SQLite (через Drift). Системне сховище ключів гарантує, що доступ отримає тільки сам додаток.",
     faq3_q: "Чи можна синхронізувати дані між пристроями?",
-    faq3_a: "Так, але це на 100% добровільно. Хмарне резервне копіювання шифрує базу вашим приватним ключем прямо на телефоні перед відправкою.",
+    faq3_a: "Так, але це на 100% добровільно. Хмарне резервне копіювання шифрує базу вашим приватним ключом прямо на телефоні перед відправкою.",
     faq4_q: "Куди писати при виникненні питань?",
-    faq4_a: "Ви можете написати нашій команді на <a href='mailto:moslyharmless@gmail.com' class='accent-cyan'>moslyharmless@gmail.com</a>. Ми завжди раді допомогти!",
+    faq4_a: "Ви можете написати нашій команді на <a href='mailto:support@voxflow.uk' class='accent-cyan'>support@voxflow.uk</a>. Ми завжди раді допомогти!",
     
     footer_desc: "Приватний планувальник завдань на основі вашого голосу.",
     footer_product: "Продукт",
